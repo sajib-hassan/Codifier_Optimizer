@@ -1,0 +1,13 @@
+<?xml version="1.0"?>
+<config>
+    <modules>
+        <Codifier_Optimizer>
+            <active>true</active>
+            <codePool>community</codePool>
+            <depends>
+                <Mage_Page/>
+                <Mage_Adminhtml/>
+            </depends>
+        </Codifier_Optimizer>
+    </modules>
+</config>

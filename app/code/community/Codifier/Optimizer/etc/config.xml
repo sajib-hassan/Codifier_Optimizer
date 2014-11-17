@@ -1,0 +1,61 @@
+<?xml version="1.0"?>
+<config>
+    <modules>
+        <Codifier_Optimizer>
+            <version>0.8.9</version>
+        </Codifier_Optimizer>
+    </modules>
+
+    <global>
+        <models>
+            <optimizer>
+                <class>Codifier_Optimizer_Model</class>
+            </optimizer>
+            <core>
+                <rewrite>
+                    <!-- start - this rewrite can be removed if the Theme Optimizer is not in use -->
+                    <layout_update>Codifier_Optimizer_Model_Core_Layout_Update</layout_update>
+                    <!-- end - this rewrite can be removed if the Theme Optimizer is not in use -->
+                    <design_package>Codifier_Optimizer_Model_Core_Design_Package</design_package>
+                </rewrite>
+            </core>
+        </models>
+        <blocks>
+            <optimizer>
+                <class>Codifier_Optimizer_Block</class>
+            </optimizer>
+            <page>
+                <rewrite>
+                     <html_head>Codifier_Optimizer_Block_Page_Html_Head</html_head>
+                </rewrite>
+            </page>
+        </blocks>
+        <helpers>
+            <optimizer>
+                <class>Codifier_Optimizer_Helper</class>
+            </optimizer>
+        </helpers>
+    </global>
+    <admin>
+        <routers>
+            <adminhtml>
+                <args>
+                    <modules>
+                        <optimizer before="Mage_Adminhtml">Codifier_Optimizer_Adminhtml</optimizer>
+                    </modules>
+                </args>
+            </adminhtml>
+        </routers>
+    </admin>
+    <default>
+        <dev>
+            <js>
+                <optimizer_minify_blacklist>js/mage/adminhtml/sales/packaging.js</optimizer_minify_blacklist>
+            </js>
+            <css>
+                <optimizer_minify_blacklist></optimizer_minify_blacklist>
+                <optimizer_minify_blacklist_secure></optimizer_minify_blacklist_secure>
+            </css>
+        </dev>
+    </default>
+</config>
