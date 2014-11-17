@@ -1,4 +1,4 @@
 Codifier_Optimizer
 ==================
 
-Magento >  CSS/JS minify, HTTP call optimization
+Magento CE and EE > CSS/JS minify, HTTP call optimization
