@@ -128,7 +128,7 @@ class Codifier_Optimizer_Block_Adminhtml_Optimizer_View_Plane extends Mage_Admin
         if (isset($result['skipped'])) {
             $html .= '<h4>Not Processed</h4>';
             $html .= '<table cellpadding="2" cellspacing="0" border="0" width="' . $tableWidth . '">';
-            $html .= '<tr><td colspan="2">The following handles have not been processed by the theme optimiser. A common reason for skipped processing is that no required object was found - so for example to test sales_order_invoice an existing invoice is needed. Please review them manually.</td></tr>';
+            $html .= '<tr><td colspan="2">The following handles have not been processed by the theme optimizer. A common reason for skipped processing is that no required object was found - so for example to test sales_order_invoice an existing invoice is needed. Please review them manually.</td></tr>';
             foreach ($result['skipped'] as $handle => $files) {
                 $html .= '<tr><td colspan="2">' . $handle . '</td></tr>';
             }

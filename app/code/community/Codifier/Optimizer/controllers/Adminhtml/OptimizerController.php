@@ -29,7 +29,7 @@ class Codifier_Optimizer_Adminhtml_OptimizerController extends Mage_Adminhtml_Co
             $apply = $this->getRequest()->getParam('apply') == 'true';
             $this->_initAction()
                 ->_addContent(
-                $this->getLayout()->createBlock('optimizer/adminhtml_optimiser')->setStoreToCheck($storeId)
+                $this->getLayout()->createBlock('optimizer/adminhtml_optimizer')->setStoreToCheck($storeId)
                     ->setApply($apply)
             )
                 ->renderLayout();

@@ -37,7 +37,7 @@ class Codifier_Optimizer_Block_Adminhtml_Optimizer extends Mage_Adminhtml_Block_
         }
 
         $this->_blockGroup = 'optimizer';
-        $this->_controller = 'adminhtml_optimiser';
+        $this->_controller = 'adminhtml_optimizer';
         $this->_headerText = Mage::helper('optimizer')->__('SpeedsterAdvanced - Theme Optimizer');
         
         parent::__construct();

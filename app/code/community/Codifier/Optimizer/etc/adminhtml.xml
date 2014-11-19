@@ -7,7 +7,7 @@
                     <children>
                         <optimizer translate="title" module="optimizer">
                             <title>Theme Optimizer</title>
-                            <action>adminhtml/optimiser</action>
+                            <action>adminhtml/optimizer</action>
                         </optimizer>
                     </children>
                 </tools>
