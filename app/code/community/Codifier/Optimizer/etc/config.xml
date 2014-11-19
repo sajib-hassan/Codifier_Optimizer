@@ -48,13 +48,6 @@
         </routers>
     </admin>
     <frontend>
-        <layout>
-            <updates>
-                <optimizer>
-                    <file>optimizer/footerjs.xml</file>
-                </optimizer>
-            </updates>
-        </layout>
         <events>
             <http_response_send_before>
                 <observers>
