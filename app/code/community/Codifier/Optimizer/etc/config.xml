@@ -2,7 +2,7 @@
 <config>
     <modules>
         <Codifier_Optimizer>
-            <version>0.8.9</version>
+            <version>1.0.0</version>
         </Codifier_Optimizer>
     </modules>
 
@@ -26,7 +26,7 @@
             </optimizer>
             <page>
                 <rewrite>
-                     <html_head>Codifier_Optimizer_Block_Page_Html_Head</html_head>
+                    <html_head>Codifier_Optimizer_Block_Page_Html_Head</html_head>
                 </rewrite>
             </page>
         </blocks>
@@ -47,10 +47,30 @@
             </adminhtml>
         </routers>
     </admin>
+    <frontend>
+        <layout>
+            <updates>
+                <optimizer>
+                    <file>optimizer/footerjs.xml</file>
+                </optimizer>
+            </updates>
+        </layout>
+        <events>
+            <http_response_send_before>
+                <observers>
+                    <optimizer_move_all_js_to_footer>
+                        <class>optimizer/observer</class>
+                        <method>moveAllJsToFooter</method>
+                    </optimizer_move_all_js_to_footer>
+                </observers>
+            </http_response_send_before>
+        </events>
+    </frontend>
     <default>
         <dev>
             <js>
                 <optimizer_minify_blacklist>js/mage/adminhtml/sales/packaging.js</optimizer_minify_blacklist>
+                <move_all_js_to_footer>0</move_all_js_to_footer>
             </js>
             <css>
                 <optimizer_minify_blacklist></optimizer_minify_blacklist>
